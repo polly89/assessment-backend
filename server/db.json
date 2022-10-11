@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "goal": "Exercise every day for:",
+        "duration":15,
+        "imageURL": "https://images.unsplash.com/photo-1599552683573-9dc48255fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id":2,
+        "goal": "Code daily, for:",
+        "duration":15,
+        "imageURL":"https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+        "id":3,
+        "goal": "Read to the kids for:",
+        "duration":15,
+        "imageURL":"https://images.unsplash.com/photo-1476234251651-f353703a034d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cmVhZCUyMGtpZHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id":4,
+        "goal": "Spend time outside, at least:",
+        "duration":15,
+        "imageURL":"https://images.unsplash.com/photo-1584715625116-c1dbbfcf19be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG91dGRvb3JzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    }
+]

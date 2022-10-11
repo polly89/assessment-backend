@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link href="./index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  </head>
+  <body class="container">
+    <header>
+      <h1>SMART Goals!</h1><br>
+     </header> 
+     <p>When you sent goals,make sure that they are SMART: <br>
+      Specific, Mesurable, Achievable, Relevant, and Time-Based.<br> 
+      Instead of saying "I want to get in shape.", say "I'm going to exercise 30 mins a day." <br>
+      Give it a try! Modify any of the following goals to fit your needs. </p>
+    
+    <main>
+    <form>
+      <input
+      type='text'
+      id="goal"
+      placeholder="Write a new goal!"/>
+      <input
+      type='text'
+      id="img"
+      placeholder="Paste inspirational URL"/>
+      <section id="mins">
+        <p class="duration-instrctions">Set desired duration in mins.</p>
+        <div id="radio-container">
+          <label for="15mins">
+            <input
+            type="radio"
+            name="duration"
+            value="15"
+            id="fifteen"/>
+            15
+          </label>
+          <label for="30mins">
+            <input
+            type="radio"
+            name="duration"
+            value="30"
+            id="thirty"/>
+            30
+          </label>
+          <label for="45mins">
+            <input
+            type="radio"
+            name="duration"
+            value="45"
+            id="forty-five"/>
+            45
+          </label>
+          <label for="60mins">
+            <input
+            type="radio"
+            name="duration"
+            value="60"
+            id="sixty"/>
+            60
+          </label>
+        </div>
+      </section>
+      <button>Add a goal</button>
+    </form>
+    
+    <section id="goals-container"></section>
+
+    <div class="part1Btns">
+      <button id="complimentButton">Get a compliment</button>
+      <button id="fortuneButton">See your fortune</button>
+    </div>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+    
+  </body>
+</html>
