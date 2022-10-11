@@ -60,7 +60,7 @@ const updateDuration = (req, res) => {
     const { id } = req.params;
     const { type } = req.body; 
 
-    const goalIndex = goals.findIndex((goal) => goal.id === +id); // this could be replaced with a for loop
+    const goalIndex = goals.findIndex((goal) => goal.id === +id); 
     const goalToAdjust = goals[goalIndex]
     if(type === 'plus' && goalToAdjust.duration < 60){
         goalToAdjust.duration++
