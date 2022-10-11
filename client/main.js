@@ -29,7 +29,7 @@ const baseURL =`http://localhost:4000/api/goals`
 const getGoals = () => axios.get(baseURL).then(goalsCallback).catch(error => console.log(error))
 const createGoal = body => axios.post(baseURL, body).then(goalsCallback).catch(error => console.log(error))
 const deleteGoal = id => axios.delete(`${baseURL}/${id}`).then(goalsCallback).catch(error => console.log(error))
-const updateDuration = (id, type)=> axios.put(`${baseURL}/${id}`, {type}).then(goalsCallback).catch(error)
+const updateDuration = (id, type)=> axios.put(`${baseURL}/${id}`, {type}).then(goalsCallback).catch(error => console.log(error.response.data))
 
 const goalsCallback = ({ data: goals }) => displayGoals(goals)
 

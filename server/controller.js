@@ -56,18 +56,20 @@ const deleteGoal =(req, res) => {
 console.log(goals[3].id)
 
 const updateDuration = (req, res) => {
+    const goals = require('./db.json');
     const { id } = req.params;
-    const { type } = req.body;
+    const { type } = req.body; 
 
-    const goalIndex = goals.findIndex((goal) => goal.id === +id);
+    const goalIndex = goals.findIndex((goal) => goal.id === +id); // this could be replaced with a for loop
     const goalToAdjust = goals[goalIndex]
-    if ( type === 'plus' && goalToAdjust.duration < 60){
+    if(type === 'plus' && goalToAdjust.duration < 60){
         goalToAdjust.duration++
-    }else if(type === 'minus' && goalToAdjust.duration > 15){
+    } else if (type === 'minus' && goalToAdjust.duration > 0){
         goalToAdjust.duration--
     }
-    res.status(200).send(goals)
+    res.status(200).send(goals);
 }
+
 module.exports = {
     getCompliment,
     getFortune,
