@@ -41,14 +41,11 @@ const addGoal = (req, res) => {
     nextID++
     res.status(200).send(goals);
 }
-const deleteGoal =(req, res)=> { 
-    // let index = goals.findIndex(goal => goal[i].id === +req.params.id)
-    // goals.splice(index, 1)
-    // res.status(200).send(goals)
+const deleteGoal =(req, res) => {
+    const goals = require('./db.json');
     const { id } = req.params;
     for(let i = 0; i < goals.length; i++){
         if(goals[i].id === +id){
-            console.log(goals[i].id)
             goals.splice(i, 1);
             res.status(200).send(goals);
             return;
@@ -56,6 +53,7 @@ const deleteGoal =(req, res)=> {
     }
     res.status(400).send(goals);
 }
+console.log(goals[3].id)
 
 const updateDuration = (req, res) => {
     const { id } = req.params;

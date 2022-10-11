@@ -39,18 +39,18 @@ function displayGoals(arr){
         createGoalCard(arr[i])
     }
 }
-function createGoalCard(id) {
+function createGoalCard(goal) {
     const goalCard = document.createElement('div')
     goalCard.classList.add('goal-card')
 
-    goalCard.innerHTML = `<img alt='Inspirational image' src=${id.imageURL} class="goal-cover"/>
-    <p class="goal">${id.goal}</p>
+    goalCard.innerHTML = `<img alt='Inspirational image' src=${goal.imageURL} class="goal-cover"/>
+    <p class="goal-input">${goal.goal}</p>
     <div class="btns-container">
-        <button onclick="updateDuration(${id}, 'minus')">-</button>
-        <p class="goal-duration">${id.duration} mins</p>
-        <button onclick="updateDuration(${id}, 'plus')">+</button>
+        <button onclick="updateDuration(${goal.id}, 'minus')">-</button>
+        <p class="goal-duration">${goal.duration} mins</p>
+        <button onclick="updateDuration(${goal.id}, 'plus')">+</button>
     </div>
-    <button onclick="deleteGoal(${id})">delete</button>
+    <button onclick="deleteGoal(${goal.id})">delete</button>
     `
     goalsContainer.appendChild(goalCard)
 }
@@ -58,7 +58,7 @@ function createGoalCard(id) {
 function submitHandler(e){
     e.preventDefault()
 
-    let goal = document.querySelector('#goal')
+    let goal = document.querySelector('#goal-input')
     let duration = document.querySelector('input[name="duration"]:checked')
     let imageURL = document.querySelector('#img')
 
